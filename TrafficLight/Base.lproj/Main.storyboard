@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,51 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="SpY-Tl-Hfh">
-                                <rect key="frame" x="132" y="79" width="129" height="719"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-mU-bHm">
+                                <rect key="frame" x="158.66666666666666" y="763.66666666666663" width="75.666666666666657" height="34.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startTrafficLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBd-mT-q1z"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-gT-BpU">
+                                <rect key="frame" x="125.66666666666667" y="78.999999999999972" width="141.66666666666663" height="511.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-Ea-VBD">
-                                        <rect key="frame" x="0.0" y="0.0" width="129" height="484.66666666666669"/>
-                                        <subviews>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1y-8F-MSa">
-                                                <rect key="frame" x="0.0" y="0.0" width="129" height="133.66666666666666"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            </view>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-jU-7Tw">
-                                                <rect key="frame" x="0.0" y="175.66666666666663" width="129" height="133.33333333333337"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                            </view>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAL-D6-c6k">
-                                                <rect key="frame" x="0.0" y="351" width="129" height="133.66666666666663"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
-                                        </subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1y-8F-MSa">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="141.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstItem="OAL-D6-c6k" firstAttribute="height" secondItem="P1y-8F-MSa" secondAttribute="height" id="2dn-aY-erk"/>
-                                            <constraint firstItem="2WW-jU-7Tw" firstAttribute="height" secondItem="P1y-8F-MSa" secondAttribute="height" id="SG1-53-CPx"/>
+                                            <constraint firstAttribute="width" secondItem="P1y-8F-MSa" secondAttribute="height" multiplier="1:1" id="SFu-jk-eKC"/>
                                         </constraints>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-mU-bHm">
-                                        <rect key="frame" x="0.0" y="684.66666666666663" width="129" height="34.333333333333371"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="START">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="startTrafficLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBd-mT-q1z"/>
-                                        </connections>
-                                    </button>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-jU-7Tw">
+                                        <rect key="frame" x="0.0" y="184.66666666666669" width="141.66666666666666" height="141.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2WW-jU-7Tw" secondAttribute="height" multiplier="1:1" id="vWL-H5-Jve"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAL-D6-c6k">
+                                        <rect key="frame" x="0.0" y="369.33333333333331" width="141.66666666666666" height="142"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OAL-D6-c6k" secondAttribute="height" multiplier="1:1" id="VI2-4h-xBj"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SpY-Tl-Hfh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Eoi-nd-geB"/>
-                            <constraint firstItem="SpY-Tl-Hfh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Wu0-UC-Tuo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SpY-Tl-Hfh" secondAttribute="bottom" constant="20" id="q2n-m2-gGE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SpY-Tl-Hfh" secondAttribute="trailing" constant="132" id="y6G-k4-rUW"/>
+                            <constraint firstItem="5WY-gT-BpU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BCf-wQ-0u3"/>
+                            <constraint firstItem="5WY-gT-BpU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="RZk-TH-b1d"/>
+                            <constraint firstItem="jNX-mU-bHm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SCK-yz-IpG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jNX-mU-bHm" secondAttribute="bottom" constant="20" id="Sz6-EN-Jvq"/>
+                            <constraint firstItem="5WY-gT-BpU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la7-ei-AER"/>
                         </constraints>
                     </view>
                     <connections>
@@ -80,13 +82,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
